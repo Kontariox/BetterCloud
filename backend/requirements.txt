@@ -1,0 +1,6 @@
+uvicorn
+fastapi
+passlib
+python-jose
+dotenv
+python-multipart
