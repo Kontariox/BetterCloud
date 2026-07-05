@@ -20,7 +20,7 @@ class CreateNoteRequest(BaseModel):
             raise ValueError("Title cannot exceed 255 characters")
         return v if v else "Untitled Note"
 
-@router.post("")
+@router.post("/")
 def create_note(req: CreateNoteRequest, current_user: dict = Depends(get_current_user)):
     conn = get_db_connection()
     try:

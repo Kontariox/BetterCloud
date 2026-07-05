@@ -3,7 +3,7 @@ from backend.routes.auth.utils import get_db_connection, get_current_user
 
 router = APIRouter()
 
-@router.get("")
+@router.get("/")
 def list_notes(current_user: dict = Depends(get_current_user)):
     conn = get_db_connection()
     try:
